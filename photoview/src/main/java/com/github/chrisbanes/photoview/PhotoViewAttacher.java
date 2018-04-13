@@ -378,6 +378,9 @@ public class PhotoViewAttacher implements View.OnTouchListener,
                             handled = true;
                         }
                     }
+                    if (mOnViewDragListener != null) {
+                        mOnViewDragListener.onDragFinished();
+                    }
                     break;
             }
 
